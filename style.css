@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header.header {
+    background-image: url('lebong tambang.jpeg');
+    background-size: 300px;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 1rem;
+    height: 20vh;
+}
+
+header.header .village-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header.header .subtitle {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+nav.navbar {
+    background-color: #38b2ac;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.navbar ul li {
+    margin: 0 1rem;
+}
+
+nav.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hide All Sections Initially */
+.section {
+    display: none;
+    padding: 7rem 1rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c7a7b;
+}
+
+footer.footer {
+    background-color: #2c7a7b;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.gallery-item {
+    width: 200px;
+    text-align: center;
+}
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Style dasar galeri */
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Efek zoom saat hover */
+.gallery-item:hover .gallery-image {
+    transform: scale(1.2);
+    filter: brightness(0.8);
+}
+
+/* Caption animasi */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Tampilkan caption saat hover */
+.gallery-item:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+.caption {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 8px;
+}
+/* Rata kanan-kiri untuk konten */
+#sejarah_desa p {
+    text-align: justify;  /* Membuat teks rata kanan dan kiri */
+    margin: 0 auto;       /* Menjaga teks tetap di tengah */
+    width: 90%;           /* Batasi lebar teks agar mudah dibaca */
+    line-height: 1.8;     /* Tambahkan jarak antar baris */
+}
+
+/* Rata tengah untuk judul */
+#sejarah_desa h2 {
+    text-align: center;   /* Membuat judul tetap rata tengah */
+    margin-bottom: 1rem;  /* Tambahkan jarak bawah */
+}
+
+
+/* Menambah jarak antar elemen */
+.card, .gallery-item, form {
+    margin-bottom: 1rem; /* Tambahkan jarak antar elemen */
+}
+/* Rata tengah untuk judul */
+#visi_misi .title {
+    text-align: center;   /* Membuat judul tetap rata tengah */
+    margin-bottom: 1rem;  /* Tambahkan jarak bawah pada judul */
+    font-size: 1.5rem;    /* Ukuran font untuk judul */
+    font-weight: bold;    /* Tebalkan teks judul */
+}
+
+/* Rata kanan-kiri untuk teks visi */
+#visi_misi .visi {
+    text-align: center;  /* Rata kanan-kiri */
+    margin: 0 auto;       /* Jaga teks di tengah */
+    width: 90%;           /* Batasi lebar teks */
+    line-height: 1.8;     /* Tambahkan jarak antar baris */
+    font-size: 1.2rem;    /* Ukuran font untuk teks visi */
+    font-weight: normal;  /* Teks tidak perlu terlalu tebal */
+}
+
+/* Rata kanan-kiri untuk teks misi */
+#visi_misi .misi {
+    text-align: justify;  /* Rata kanan-kiri */
+    margin: 0 auto;       /* Jaga teks tetap di tengah */
+    width: 90%;           /* Batasi lebar teks */
+    line-height: 1.8;     /* Tambahkan jarak antar baris */
+    font-size: 1rem;      /* Ukuran font untuk teks misi */
+    list-style-position: inside; /* Membuat daftar tetap rapi */
+    padding-left: 0;      /* Hilangkan padding kiri default */
+}
+
+/* Tambahkan jarak antar poin misi */
+#visi_misi .misi li {
+    margin-bottom: 0.8rem; /* Tambahkan jarak antar item dalam daftar */
+}
+/* Kontak Seksi */
+#kontak {
+    text-align: center;       /* Untuk tata letak rata tengah */
+    padding: 2rem;           /* Jarak dalam seksi */
+    background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+    border-radius: 10px;     /* Membuat sudut membulat */
+    width: 80%;              /* Membatasi lebar konten */
+    margin: 0 auto;          /* Tengah secara horizontal */
+}
+
+/* Judul Kontak */
+#kontak h2 {
+    font-size: 1.8rem;       /* Ukuran font besar untuk judul */
+    margin-bottom: 1rem;     /* Jarak bawah */
+}
+
+/* Informasi Kontak */
+.kontak-info p {
+    font-size: 1rem;         /* Ukuran teks */
+    margin-bottom: 1rem;     /* Tambahkan jarak antar elemen */
+    line-height: 1.5;        /* Jarak antar baris */
+}
+
+/* Link */
+.kontak-info a {
+    color: #007BFF;          /* Warna biru untuk link */
+    text-decoration: none;   /* Hilangkan garis bawah */
+}
+
+.kontak-info a:hover {
+    text-decoration: underline; /* Tambahkan garis bawah saat hover */
+}
+/* Rata kanan-kiri untuk konten */
+#sejarah_desa p {
+    text-align: justify;  /* Membuat teks rata kanan dan kiri */
+    margin: 0 auto;       /* Menjaga teks tetap di tengah */
+    width: 90%;           /* Batasi lebar teks agar mudah dibaca */
+    line-height: 1.8;     /* Tambahkan jarak antar baris */
+}
+
+/* Rata tengah untuk judul */
+#sejarah_desa h2 {
+    text-align: center;   /* Membuat judul tetap rata tengah */
+    margin-bottom: 1rem;  /* Tambahkan jarak bawah */}
